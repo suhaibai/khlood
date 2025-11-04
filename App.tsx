@@ -83,9 +83,10 @@ const App: React.FC = () => {
       case GameState.Start:
         return (
           <div className="text-center animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-cyan-300 drop-shadow-[0_2px_2px_rgba(0,255,255,0.3)]">بوصلة المسار المهني</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-2 text-cyan-300 drop-shadow-[0_2px_2px_rgba(0,255,255,0.3)]">بوصلة الوظايف</h1>
+            <p className="text-slate-400 text-sm mb-6">عمل بواسطة خلود حياصات</p>
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              اكتشف مسارك المهني المثالي. أجب على بعض الأسئلة ودع الذكاء الاصطناعي يوجه بوصلتك نحو المستقبل.
+              اكتشف وظيفتك المثالية. أجب على بعض الأسئلة ودع الذكاء الاصطناعي يوجه بوصلتك نحو المستقبل.
             </p>
             <button
               onClick={handleStartQuiz}
@@ -146,16 +147,13 @@ const App: React.FC = () => {
   }
 
   return (
-    <main className="min-h-screen w-full flex flex-col items-center justify-center p-4 overflow-hidden relative pb-12">
+    <main className="min-h-screen w-full flex flex-col items-center justify-center p-4 overflow-hidden relative">
         <div className="mb-8 mt-8">
             <Compass status={getCompassStatus()} targetAngle={targetAngle} />
         </div>
         <div className="w-full max-w-3xl">
            {renderContent()}
         </div>
-        <footer className="absolute bottom-4 text-slate-500 text-sm">
-          عمل بواسطة خلود حياصات
-        </footer>
        <style>{`
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(20px); }
