@@ -1,3 +1,4 @@
+
 import React, { useState, useCallback, useEffect } from 'react';
 import { GameState, type Question, type Answer, type CareerResult, CAREER_PATHS, CareerPath } from './types';
 import { getQuestions, analyzeAnswers } from './services/geminiService';
@@ -84,10 +85,7 @@ const App: React.FC = () => {
         return (
           <div className="text-center animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold mb-2 text-cyan-300 drop-shadow-[0_2px_2px_rgba(0,255,255,0.3)]">بوصلة الوظايف</h1>
-            <p className="text-slate-400 text-sm mb-6">عمل بواسطة خلود حياصات</p>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              اكتشف وظيفتك المثالية. أجب على بعض الأسئلة ودع الذكاء الاصطناعي يوجه بوصلتك نحو المستقبل.
-            </p>
+            <p className="text-slate-400 text-sm mb-12">عمل بواسطة خلود حياصات</p>
             <button
               onClick={handleStartQuiz}
               className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full text-xl transition-all transform hover:scale-105 duration-300 shadow-lg shadow-cyan-500/50"
